@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light left">
+  <a class="navbar-brand" href="#">Quipux</a>
+  <ul class="breadcrumb mb-0">
+    <li *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item">
+      <a *ngIf="!breadcrumb.last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+      <span *ngIf="breadcrumb.last">  <i class="bi bi-house"></i> EMPRESA / {{ breadcrumb.label }}</span>
+    </li>
+  </ul>
+  <div class="ml-auto d-flex align-items-center ">
+    <i class="bi bi-person-circle"></i>
+    <span class="mr-3">Usuario Apellido</span>
+    <i class="bi bi-caret-down-fill"></i>
+  </div>
+</nav>

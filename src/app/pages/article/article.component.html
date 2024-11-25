@@ -1,0 +1,87 @@
+<section class="section-1">
+  <div class="left">
+    <div class="card-contacto">
+      <div class="">
+        <h5><strong>INFORMACIÓN DEL CONTACTO</strong></h5>
+        <p>
+          <strong>Dirección:</strong><br />
+          {{ contact.address }}
+        </p>
+        <p>
+          <strong>Correo electrónico:</strong><br />
+          {{ contact.email }}
+        </p>
+        <p>
+          <strong>Sitio Web:</strong><br />
+          <a href="http://{{ contact.website }}" target="_blank">{{
+            contact.website
+          }}</a>
+        </p>
+        <p><strong>Red social:</strong><br /></p>
+
+        <ul>
+          <li *ngFor="let social of contact.socialMedia">
+            <a href="http://{{ social }}" target="_blank">{{ social }}</a>
+          </li>
+        </ul>
+        <p>
+          <strong>Dirección de correspondencia:</strong><br />
+          {{ contact.correspondenceAddress }}
+        </p>
+        <p>
+          <strong>Número de teléfonos:</strong><br />
+          Fijo: {{ contact.phoneNumbers.landline }}<br />
+          Celular: {{ contact.phoneNumbers.mobile }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rigth">
+    <div class="slides">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            *ngFor="let slide of images; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+          >
+            <img [src]="slide.url"  [alt]="slide.alt" />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="card-producto">
+      <div class="contenido" *ngFor="let producto of producto">
+        <div class="circulo"></div>
+        <p>{{ producto.nombre}}</p>
+        <div class="texto">
+            <p>
+              {{producto.texto}}
+              </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

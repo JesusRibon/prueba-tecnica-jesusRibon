@@ -1,0 +1,38 @@
+{
+  "company": {
+    "name": "Quipux S.A.S",
+    "creationDate": "1995/05/06",
+    "address": "Carrera 43A No. 3 Sur-130, Ed. Milla de Oro, Distrito de negocios Torre 1, Piso 12, Medellín - Colombia",
+    "phoneNumbers": {
+      "landline": "+57 (4) 313-70-00",
+      "fax": "+57 (4) 313-44-77"
+    },
+    "website": "www.quipux.com/site"
+  },
+  "contact": {
+    "address": "Carrera 52 # 91-66, Medellín Colombia",
+    "email": "usuarioapellido@hotmail.com",
+    "socialMedia": [
+      "www.instagram.com/usuarioapellido",
+      "www.linkedin.com/usuarioapellido"
+    ],
+    "correspondenceAddress": "Carrera 52 # 91-66, Envigado Colombia",
+    "phoneNumbers": {
+      "landline": "+57 (4) 313-70-00",
+      "mobile": "(312) 313-44-77"
+    }
+  },
+  "products": [
+    {
+      "name": "Nombre artículo",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "image": "assets/img/product-placeholder.png"
+    },
+    {
+      "name": "Nombre artículo",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "image": "assets/img/product-placeholder.png"
+    }
+  ]
+}
+

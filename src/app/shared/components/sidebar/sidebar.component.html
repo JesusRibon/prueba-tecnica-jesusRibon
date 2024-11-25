@@ -1,0 +1,72 @@
+<div id="sidebar" [class.open]="isSidebarOpen" class="sidebar">
+  <!-- Header del Sidebar -->
+  <div class="sidebar-header"> 
+    <button type="button" class="close" (click)="onToggleSidebar()">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="titel" *ngIf="isSidebarOpen">
+      <p>Quipux</p>
+    </div>
+  </div>
+
+  <!-- Sidebar Abierto -->
+  <ul class="list-unstyled" *ngIf="isSidebarOpen">
+    <!-- Submenú Empresas -->
+    <li>
+      <a href="javascript:void(0);" (click)="toggleSubmenu('empresas')">
+        <i class="bi bi-building"></i> 
+        <span>Empresas</span>
+        <i 
+          class="bi" 
+          [class.bi-chevron-down]="!submenuOpen['empresas']" 
+          [class.bi-chevron-up]="submenuOpen['empresas']">
+        </i>
+      </a>
+      <ul class="submenu" *ngIf="submenuOpen['empresas']">
+        <li><a  routerLink="/empresa">Empresa</a></li>
+      </ul>
+    </li>
+
+    <!-- Submenú Artículos -->
+    <li>
+      <a href="javascript:void(0);" (click)="toggleSubmenu('articulos')">
+        <i class="bi bi-file-earmark-text"></i> 
+        <span>Artículos</span>
+        <i 
+          class="bi" 
+          [class.bi-chevron-down]="!submenuOpen['articulos']" 
+          [class.bi-chevron-up]="submenuOpen['articulos']">
+        </i>
+      </a>
+      <ul class="submenu" *ngIf="submenuOpen['articulos']">
+        <li><a routerLink="/articulo">Artículos</a></li>
+      </ul>
+    </li>
+
+    <!-- Submenú Colaboradores -->
+    <li>
+      <a href="javascript:void(0);" (click)="toggleSubmenu('colaboradores')">
+        <i class="bi bi-person-fill"></i> 
+        <span>Colaboradores</span>
+        <i 
+          class="bi" 
+          [class.bi-chevron-down]="!submenuOpen['colaboradores']" 
+          [class.bi-chevron-up]="submenuOpen['colaboradores']">
+        </i>
+      </a>
+      <ul class="submenu" *ngIf="submenuOpen['colaboradores']">
+        <li><a href="#">Colaboradores</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Sidebar Cerrado -->
+  <ul class="list-unstyled" *ngIf="!isSidebarOpen">
+    <li>
+      <a href="#"><i class="bi bi-building"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="bi bi-file-earmark-text"></i></a>
+    </li>
+  </ul>
+</div>

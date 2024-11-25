@@ -1,0 +1,23 @@
+.breadcrumb {
+  background-color: var(--background-color);
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  .breadcrumb-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-item span {
+    color: var(--secondary-color);
+  }
+
+  .left {
+    margin-left: 60px;
+  }

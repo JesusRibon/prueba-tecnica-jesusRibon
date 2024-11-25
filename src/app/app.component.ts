@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prueba-tecnica-jesusRibon';
+  isSidebarOpen = false;  // El sidebar está cerrado por defecto
+
+  // Alterna el estado del sidebar
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+    console.log('Estado del sidebar:', this.isSidebarOpen);  // Verifica el estado
+  }
 }

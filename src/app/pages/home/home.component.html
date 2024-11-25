@@ -1,0 +1,50 @@
+<section class="section-1">
+    <div class="left">
+        <div class="titulo">
+            <h1>¿Que quieres buscar?</h1>
+        </div>
+
+        <div class="espacio-input">
+            <p>Encuentra la informacion que desees consultar ...</p>
+            <div class="search-bar">
+                <select class="dropdown">
+                  <option>Todos los servicios</option>
+                  <option>Servicio 1</option>
+                  <option>Servicio 2</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Que servicio quieres consultar" />
+                <button class="search-button">
+                  🔍
+                </button>
+              </div>
+              
+        </div>
+
+        <div class="card-container">
+            <div *ngFor="let card of cards" class="card">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+              <button class="btn">{{ card.buttonText }}</button>
+            </div>
+          </div>
+          
+    </div>
+
+    <div class="rigth">
+        <div class="image-section">
+          <img src="../../../assets/img/home/img-1.png" alt="{{ title }}">
+          <div class="overlay-text">{{ title }}</div>
+        </div>
+        <div class="info-section">
+          <h3>{{ subtitle }}</h3>
+          <p>{{ description }}</p>
+          <div class="pagination">
+            <span>&lt; {{ page }} &gt;</span>
+            <div class="progress-bar">
+              <div class="progress" [style.width.%]="progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</section>

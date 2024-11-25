@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .layout {
+    flex: 1;
+    padding-left: 100px;
+  }
+  
+  app-footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
