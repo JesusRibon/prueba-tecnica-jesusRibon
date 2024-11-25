@@ -56,7 +56,7 @@ ul.list-unstyled li {
 ul.list-unstyled li a {
   display: flex;
   align-items: center;
-  color: var(--w);
+  color: var(--white);
   text-decoration: none;
 }
 
